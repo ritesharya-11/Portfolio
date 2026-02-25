@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal website </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>FULL STACK DEVELOPER</p>
+                <h1>Hi, I'm <span>Ritesh</span><br>from india</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------about me -->
+     <div id="about">
+        <div class="container">
+            <div class="row">
+               <div class="about-col-1">
+                <img src="images/userr.png" alt="">
+               </div>
+               <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit rem culpa architecto 
+                    accusantium ab eius dolorum voluptates sunt officiis nisi nobis necessitatibus sit ad, 
+                    dolore odio laudantium magnam cupiditate mollitia quibusdam at! Impedit minima voluptatum 
+                    corrupti consequuntur dolore suscipit optio temporibus, aliquid recusandae incidunt molestias, 
+                    omnis consequatur nulla error illum, quis nam! Iste enim mollitia veritatis quisquam suscipit possimus, 
+                    olore id.
+                </p> 
+                <div class="tab-titles ">
+                    <p class="tab-links active-links" onclick="opentab('Skills')">Skills</p>
+                    <!-- <p class="tab-links">Experience</p> -->
+                    <p class="tab-links" onclick="opentab('Education')"></p>Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Software Developer</span><br>Develop website</li>
+                        <li><span>Web Development</span><br>Develop website</li>
+                        <li><span>App Development</span><br>Building Androd/ios apps</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2023-27</span><br>B.Tech Global Group of institute</li>
+                        <li><span>2021</span><br>12th Rajendra Vidhya Mandir</li>
+                        <li><span>2019</span><br>10th Rajendra Vidhya Mandir</li>
+                    </ul>
+                </div>
+               </div>
+
+            </div>
+        </div>
+     </div>
+     <script>
+          var tablinks = document.getElementsByClassName("tab-links");
+          var tabcontents = document.getElementsByClassName("tab-contents");
+
+          function opentab(tabname){
+            for(tablink of tablinks){
+                tablinks.classlist.remove("active-link");
+            }
+            
+            }
+          
+     </script>
+</body>
+</html>
