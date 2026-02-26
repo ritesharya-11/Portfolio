@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Personal website </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div id="header">
@@ -43,8 +45,8 @@
                     olore id.
                 </p> 
                 <div class="tab-titles ">
-                    <p class="tab-links active-links" onclick="opentab('Skills')">Skills</p>
-                    <!-- <p class="tab-links">Experience</p> -->
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links"  onclick="opentab('Experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('Education')"></p>Education</p>
                 </div>
                 <div class="tab-contents active-tab" id="Skills">
@@ -53,6 +55,12 @@
                         <li><span>Web Development</span><br>Develop website</li>
                         <li><span>App Development</span><br>Building Androd/ios apps</li>
                     </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2021- current</span><br>training in solitare infosys</li>
+                    </ul>
+
                 </div>
                 
                 <div class="tab-contents" id="Education">
@@ -67,17 +75,123 @@
             </div>
         </div>
      </div>
+    <!-- -------------services----- -->
+   <div id="Services">
+      <div class="container">
+         <h1 class="sub-title">My Services</h1>
+         <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                cum tempore incidunt esse cumque recusandae odit impedit i.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Backend Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur a
+                    Consequuntur, quasi.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Cloud & Deployment Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur a
+                    Consequuntur, quasi.</p>
+                <a href="#">learn more</a>
+            </div>
+
+         </div>
+      </div>
+   </div>
+   <!----------portfolio-------->
+   <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">My  Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" >
+                    <div class="layer">
+                        <h3>Social media app</h3>
+                        <p>The app connect you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"></a>
+                    </div>
+                   
+                    
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" >
+                    <div class="layer">
+                        <h3>Music app</h3>
+                        <p>The app connect you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" >
+                    <div class="layer">
+                        <h3>Oline Shoping App</h3>
+                        <p>The app connect you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+              <a href="#" class="btn">see more</a>
+        </div>
+   </div>
+   <!--------------contact--------->
+    <div id="contac">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">contact me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane-top"></i>ritesharya9955@gmail.com</p>
+                    <p><i class="fa-sharp fa-solid fa-phone-volume"></i>8651480201</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""></a>
+
+                    </div>
+                    <a href="images/" download  class="btn btn2">Download CV></a>
+                </div>
+                <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder=" Your Name" required>
+                    <input type="email" name="email" placeholder=" Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+
+                </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ Ritesh.<i class="fa-solid fa-heart"></i>Made by ritesharya</p>
+        </div>
+    </div>
      <script>
           var tablinks = document.getElementsByClassName("tab-links");
           var tabcontents = document.getElementsByClassName("tab-contents");
 
           function opentab(tabname){
-            for(tablink of tablinks){
-                tablinks.classlist.remove("active-link");
+           for(tablink of tablinks){
+                tablink.classList.remove("active-links");
             }
-            
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab"); 
             }
-          
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
      </script>
 </body>
 </html>
