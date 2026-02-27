@@ -12,14 +12,17 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
+                <img src="images/rlogo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <i class="fas fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                    
+                </ul >
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>FULL STACK DEVELOPER</p>
@@ -145,7 +148,7 @@
         </div>
    </div>
    <!--------------contact--------->
-    <div id="contac">
+    <div id="Contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -165,7 +168,7 @@
                 <div class="contact-right">
                 <form>
                     <input type="text" name="Name" placeholder=" Your Name" required>
-                    <input type="email" name="email" placeholder=" Your Email" required>
+                    <input type="Email" name="Email" placeholder=" Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
 
@@ -191,6 +194,16 @@
             }
             event.currentTarget.classList.add("active-links");
             document.getElementById(tabname).classList.add("active-tab");
+        }
+     </script>
+     <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0"
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px"
         }
      </script>
 </body>
